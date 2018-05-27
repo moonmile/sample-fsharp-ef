@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SampleFSharpEF.Model\issues.fs" Link="issues.fs" />
+    <Compile Include="..\SampleFSharpEF.Model\projects.fs" Link="projects.fs" />
+    <Compile Include="..\SampleFSharpEF.Model\Model1.Context.fs" Link="Model1.Context.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.11" />
+  </ItemGroup>
+
+</Project>
