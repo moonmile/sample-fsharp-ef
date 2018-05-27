@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using SampleFSharpEF.Model;
+
 
 namespace SampleFSharpEF.CSharp
 {
@@ -6,7 +9,12 @@ namespace SampleFSharpEF.CSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello C# World!");
+            var ent = new redmineEntities();
+            foreach ( var it in ent.projects.ToList())
+            {
+                Console.WriteLine(String.Format("{0} : {1}", it.id, it.name));
+            }
         }
     }
 }
